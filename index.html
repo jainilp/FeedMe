@@ -13,7 +13,7 @@
         .form{
             position: relative;
             z-index: 1;
-            background: #ffffff;
+            background: rgba(7, 40, 195, 0.8);
             max-width: 360px;
             margin: 0 auto 100px;
             padding: 45px;
@@ -44,19 +44,52 @@
             font-size: 14px;
             cursor: pointer;
         }
+
+        .form button:hover, .form button: active{
+            background: #43A047;
+        }
+
+        .form .message{
+            margin: 15px 0 0;
+            color: aliceblue;
+            font-size: 12px;
+        }
+
+        .form .message a{
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        .form .register-form{
+            display: none;
+        }
         </style>
     </head>
     <body>
         <div class="login-page">
             <div class="form">
                 <form class="register-form">
-                    <input type="text" placeholder="user name"/>
-                    <input type="text" placeholder="password"/>
-                    <input type="text" placeholder="email id"/>
+                    <input type="text" placeholder="Username"/>
+                    <input type="text" placeholder="Password"/>
+                    <input type="text" placeholder="Email"/>
                     <button>Create</button>
-
+                    <p class="message">Already Registered? <a href="#">Login</a>
+                    </p>
+                </form>
+                <form class="login-form">
+                    <input type="text" placeholder="Username"/>
+                    <input type="text" placeholder="Password"/>
+                    <button>Login</button>
+                    <p class="message">Not Registered? <a href="#">Register</a>
+                    </p>
                 </form>
             </div>
         </div>
+        <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+        <script>
+            $('.message a').click(function(){
+                $('form').animate({height: "toggle", opacity:"toggle"}, "slow");
+            });
+        </script>
     </body>
 </html>
