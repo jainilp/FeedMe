@@ -16,9 +16,8 @@
         padding: 0;
       }
       #floating-panel {
-        position: absolute;
         top: 10px;
-        left: 25%;
+        left: 50%;
         z-index: 5;
         background-color: #fff;
         padding: 5px;
@@ -26,28 +25,26 @@
         text-align: center;
         font-family: 'Roboto','sans-serif';
         line-height: 30px;
-        padding-left: 10px;
+        padding-left: 50px;
       }
       #floating-panel {
         background-color: #fff;
         border: 1px solid #999;
         left: 25%;
         padding: 5px;
-        position: absolute;
         top: 10px;
         z-index: 5;
       }
     </style>
   </head>
 
-<<<<<<< HEAD
-  <body onload="changeradius()">
-=======
   <body onload="changeRadius()">
     <div id="floating-panel">
-        
+        <input id="Longitude" type="text" placeholder="Longitude">
+        <input id="Latitude" type="text" placeholder="Longitude">
+        <input type="submit">
     </div>
->>>>>>> 387cb2afb559d077efb2a1291e309be1a0b589f3
+
     <div id="map"></div>
     <script>
 
