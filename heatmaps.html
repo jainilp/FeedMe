@@ -56,8 +56,8 @@
 
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: {lat: 39.952583, lng: -75.165222},
+          zoom: 15,
+          center: {lat: 39.954948, lng: -75.183458},
           mapTypeId: 'satellite'
         });
 
@@ -75,6 +75,10 @@
       function getPoints() {
         return [
           new google.maps.LatLng(39.954948, -75.183458), //30th street station
+          new google.maps.LatLng(39.955231, -75.186368), //30th street station
+          new google.maps.LatLng(39.955073, -75.183266), //30th street station
+          new google.maps.LatLng(39.954900, -75.183105), //30th street station
+          new google.maps.LatLng(39.954900, -75.183309), //30th street station
           new google.maps.LatLng(39.954696, -75.181336), //Next to 30th street station
           new google.maps.LatLng(39.956612, -75.189941), //Drexel University
           new google.maps.LatLng(39.956280, -75.194860), //University City Science Center
