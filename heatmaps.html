@@ -40,9 +40,8 @@
 
   <body onload="changeRadius()">
     <div id="floating-panel">
-        <input id="Longitude" type="text" placeholder="Longitude">
-        <input id="Latitude" type="text" placeholder="Longitude">
-        <input type="submit">
+        <button onclick="getLocation()">Post Location</button>
+        <p id="demo"></p>
     </div>
 
     <div id="map"></div>
@@ -51,7 +50,20 @@
       // This example requires the Visualization library. Include the libraries=visualization
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=visualization">
-
+      
+      function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+      }
+      var latlngIn 
+      function showPosition(position) {
+            latlngIn = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            initMap()
+      }    
+        
       var map, heatmap;
 
       function initMap() {
@@ -82,6 +94,7 @@
           new google.maps.LatLng(39.954696, -75.181336), //Next to 30th street station
           new google.maps.LatLng(39.956612, -75.189941), //Drexel University
           new google.maps.LatLng(39.956280, -75.194860), //University City Science Center
+          latlngIn
         ];
       }
     </script>
